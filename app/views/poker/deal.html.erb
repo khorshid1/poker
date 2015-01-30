@@ -1,16 +1,31 @@
 <h1>Deal the Deck</h1>
 
+
 <%
+ numbers = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace"]
+ suits = ["diamonds", "hearts", "spades", "clubs"]
+ deck = numbers.product(suits)
+ hand = deck.sample(5)
+%>
+
+<%#define an array of numbers and of suits. %>
+
+<% hand.each do |card| %>
+	<img src="http://golearntocode.com/images/cards/<%= numbers.sample %>_of_<%= suits.sample %>
+.png">
+<% end %>
+
+
+<%# numbers.product(suits) %>
+
+<% = numbers.sample %> of <% = suits.sample %>
+
+<%# using the equal sign makes it show on the page. %>
+
+<%#
 card1 = rand(13) + 1
 card2 = rand(13) + 1
 card3 = rand(13) + 1
 card4 = rand(13) + 1
 card5 = rand(13) + 1 
 %>
-
-
-<img src="http://golearntocode.com/images/cards/<%= card1 %>.png">
-<img src="http://golearntocode.com/images/cards/<%= card2 %>.png">
-<img src="http://golearntocode.com/images/cards/<%= card3 %>.png">
-<img src="http://golearntocode.com/images/cards/<%= card4 %>.png">
-<img src="http://golearntocode.com/images/cards/<%= card5 %>.png">
